@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html ng-app="forminput">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Forms </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.1/angular.min.js"></script>    
+    <script src="app.js"></script>
+</head>
+<body>
+    <div class="container" ng-controller="formController">
+            <form ng-submit>
+                <div class="form-group">
+                    <label for="Name">Name: {{name}}</label>
+                    <input type="text" class="form-control" ng-model="name">
+                </div>
+                <div class="form-group">
+                  <label for="email">Email address: {{email}}</label>
+                  <input type="email" class="form-control" ng-model="email">
+                </div>
+                <div class="form-group">
+                    <label for="age">Age: {{age}}</label>
+                    <input type="text" class="form-control" ng-model="age">
+                    <p ng-show="form.size.$error.integer">Age should be in numbers</p>
+                </div>
+                <div class="form-group">
+                  <label for="pwd">Password:</label>
+                  <input type="password" class="form-control">
+                </div>
+                <div class="form-radio">
+                    <label><input type="radio" value="0" ng-model="gender">Male</label>
+                    <label><input type="radio" value="1" ng-model="gender">Female</label>
+                </div>
+                <div class="form-group">
+                    <label for="exampleform">Select Type</label>
+                    <select name="type" id="" class="form-control" ng-model="type">
+                        <option value="">1</option>
+                        <option value="">2</option>
+                        <option value="">3</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="address">Enter Your Address</label>
+                    <textarea name="" id="" cols="30" rows="10" class="form-control" ng-model="address"></textarea>
+                </div>
+                <div class="checkbox">
+                  <label><input type="checkbox" ng-model="agree"> Agree </label>
+                </div>
+                <button type="submit" class="btn btn-default" ng-disabled="!agree">Submit</button>
+              </form>
+    </div>
+</body>
+</html>

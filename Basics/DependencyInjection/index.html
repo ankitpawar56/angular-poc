@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html ng-app="dep"> 
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Dependancy Injection</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.1/angular.min.js"></script>    
+    <script src="app.js"></script>
+</head>
+<body>
+   <div class="container" ng-controller="mainController">
+       <h1>Dependency Injection</h1>
+       <input ng-Model="name" type="text" class="form-control">
+       <p>{{name}}</p>
+       <p>{{namelen}}</p>
+       <h3>Filters</h3>
+       <p>{{lowercasehandle()}}</p>
+   </div> 
+</body>
+</html>

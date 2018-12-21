@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html ng-app="store"> 
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Angular BAsics</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.1/angular.min.js"></script>
+    <script src="app.js"></script>
+</head>
+<body>
+    <div ng-controller="StoreController as store">
+        <!-- ng-Show Directive -->
+        <p ng-show="store.product.name">   {{store.product.name}}     </p>
+        <p>    {{store.product.price}}    </p>
+        <!-- ng-repeat -->
+        <p ng-repeat="product in store.products">{{product.name}} {{product.price}}</p>
+        <div>
+        <!-- two way Binding -->
+            <input ng-model="store.product.name" type="text">
+           <!-- ngIf Directive -->
+            <p ng-if="store.product.name"> {{store.product.name}}</p>
+        <!-- ng-class -->
+            <p ng-class="{'oneclass':store.product.name}">ng-class</p>
+        </div>
+    </div> 
+</body>
+</html>
+
+<style>
+.oneclass { 
+    color: red;
+}
+.twoclass {
+    color: blue;
+}
+</style>

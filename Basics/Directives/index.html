@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html ng-app="dir">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Directives</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.1/angular.min.js"></script>    
+    <script src="app.js"></script>
+</head>
+<body>
+    <div class="container" ng-controller="mainController">
+        <h1>Directives</h1>
+        <h3>Common Directives</h3>
+        <h4>ng-model</h4>
+        <input type="text" ng-model="name">
+        <p>{{name}}</p>
+        <hr>
+        <h1>Custom Directive</h1>
+        <label for="Search">Search</label>
+        <input type="text" value="DOe">
+        <h3>Search Results</h3>
+        <div class="list-group">
+            <search-result></search-result>
+            <search-result></search-result>
+            <search-result></search-result>
+            <second-result></second-result>
+        </div>
+        </div>
+    </div>
+</body>
+</html>
