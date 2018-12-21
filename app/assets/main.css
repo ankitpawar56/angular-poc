@@ -1,0 +1,74 @@
+.navbar-brand {
+    float:none;
+}
+
+a.navbar-brand {
+    color: black;
+}
+
+.navbar-inner {
+    padding-left: 0px;
+    -webkit-border-radius: 0px;
+    border-radius: 0px;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    display: fixed;
+    background-color: whitesmoke;
+}
+.nav.navBarPadding {
+    margin-left:25px;
+    margin-top: 10px;
+}
+#nav-login {
+    margin-left:100px;
+}
+.custlist {
+    width: 100%;
+    top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+    .custs {
+    width: 300px;
+    padding: 1em;
+    margin: 1em 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 30px;
+    /* box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19); */
+    box-shadow: rgba(0,0,0,0.19) 0px 2px 63px -4px;
+  }
+
+    .custdetail {
+        width: 70%;
+    padding: 20px;
+    margin: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 30px;
+   box-shadow: rgba(0,0,0,0.19) 0px 2px 63px -4px;
+    }
+  
+  .custs:hover {
+       box-shadow:rgba(0,0,0,0.19) 0px 2px 23px -4px;
+        transition: 500ms;
+  }
+.pad {
+    margin: 10px;
+}
+
+.is-flex {
+  display: flex;
+}
+
+.resize {
+    height: 150px;
+    width: 150px;
+}
+.top {
+    margin-top: 80px;
+}

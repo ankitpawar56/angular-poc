@@ -1,0 +1,13 @@
+<div class="container">
+    <div class="col-md-12">
+        <div class="custdetail">
+            <img src="{{customerdata.img}}" alt="">
+            <div class="captain margin-left-sm pad">
+                <h3>{{customerdata.firstname}} {{customerdata.lastname}}</h3>
+                <p>Email : {{customerdata.email}}</p>
+                <p>City : {{customerdata.city}}</p>
+                <p ng-if="customerdata.age">Age : {{customerdata.age}}</p>
+            </div>
+        </div>
+    </div>
+</div>
