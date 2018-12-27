@@ -1,7 +1,7 @@
-# custapp
-npm install
-bower install
-grunt serve
+# customer manager
+## npm install
+## bower install
+## grunt serve
 This project is generated with [yo angular generator](https://github.com/yeoman/generator-angular)
 version 0.16.0.
 
