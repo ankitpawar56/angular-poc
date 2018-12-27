@@ -3,6 +3,7 @@
 
     var app = angular.module('customerapp',
          ['ngRoute',
+         'alexjoffroy.angular-loaders',
          'customerService',
          'customerController',
          'addCustomerController',
@@ -12,25 +13,24 @@
         $routeProvider .when('/', {
         controller: 'customerController',
         controllerAs: 'vm',
-        templateUrl: 'Customers/customerView.html',
+        templateUrl: 'views/customerView.html',
         })
         .when('/customers', {
             controller: 'customerController',
             controllerAs: 'vm',
-            templateUrl: 'Customers/customerView.html',
+            templateUrl: 'views/customerView.html',
         })
         .when('/addCustomer', {
             controller: 'addCustomerController',
-            templateUrl: 'Customers/addCustomer.html',
+            templateUrl: 'views/addCustomer.html',
         })
         .when('/editCustomer/:id', {
             controller: 'editCustomerController',
-            templateUrl: 'Customers/editCustomer.html',
+            templateUrl: 'views/editCustomer.html',
         })
         .when('/customerDetail/:id', {
             controller: 'customerDetailController',
-            templateUrl: 'Customers/customerDetail.html'
+            templateUrl: 'views/customerDetail.html'
         })
-    }])
-        
+    }])      
 }());

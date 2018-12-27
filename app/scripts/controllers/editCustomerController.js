@@ -1,10 +1,13 @@
 var app = angular.module('editCustomerController', [])
-app.controller('editCustomerController',['customerService','$http','$scope','$routeParams',function(customerService,$http, $scope, $routeParams){
+app.controller('editCustomerController',['customerService','$http','$scope','$routeParams','$location',function(customerService,$http, $scope, $routeParams, $location){
     $scope.id = $routeParams.id
+    $scope.loading = true
     //customerService.getCustomerData($scope.id)
     $scope.getCustomerData = function() {
+        $scope.loading = true
        $http.get('http://localhost:3000/customers/'+$scope.id).success(function(data) {
-           $scope.customer = data    
+           $scope.customer = data
+           $scope.loading = false
        }).error(function() {
            console.log('error in customers');
        });
@@ -20,5 +23,6 @@ app.controller('editCustomerController',['customerService','$http','$scope','$ro
     }
     $scope.editCustomer = function() {
         customerService.editCustomer($scope.customer, $scope.id)
+        $location.path("/customers")
     }
 }])

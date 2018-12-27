@@ -1,5 +1,5 @@
 var app = angular.module('addCustomerController', [])
-app.controller('addCustomerController',['customerService','$scope',function(customerService, $scope){
+app.controller('addCustomerController',['customerService','$scope','$location',function(customerService, $scope,$location){
     $scope.customerData = {
      firstname : '',
      lastname : '',
@@ -9,5 +9,6 @@ app.controller('addCustomerController',['customerService','$scope',function(cust
     }
     $scope.addCustomer = function() {
         customerService.addCustomer($scope.customerData)
+        $location.path("/customers")
     }
 }])

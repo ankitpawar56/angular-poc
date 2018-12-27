@@ -6,19 +6,26 @@ app.controller('customerController', ['$http', function($http){
     vm.searchCustomers = [], 
     vm.searchText = ''
     vm.page = 1,
+    vm.loading = true
+
+
 
     vm.getCustomers = function() {
         $http.get('http://localhost:3000/customers?_page=1').success(function(data) {
             vm.customers = data;
+            vm.loading= false
         }).error(function() {
             console.log('error in customers');
         });
     }()
 
     vm.searchCustomers = function() {
+        vm.loading = true
         $http.get('http://localhost:3000/customers?q='+vm.searchText).success(function(data) {
             console.log(data)
                 vm.customers = data;
+            vm.loading= false
+
         }).error(function() {
             console.log('error in customers');
         });

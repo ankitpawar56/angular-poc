@@ -305,21 +305,13 @@
       "img": "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png"
     },
     {
-      "id": 49,
-      "firstname": "Walker",
-      "lastname": "Carroll",
-      "email": "Shaniya46@hotmail.com",
-      "city": "North Kariannetown",
-      "img": "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png"
-    },
-    {
-      "firstname": "ankit",
-      "lastname": "pawar",
-      "city": "sdsdg",
-      "email": "shdfg@sdf.com",
+      "firstname": "New",
+      "lastname": "customer",
+      "city": "newcity",
+      "email": "newcust@cust.com",
       "img": "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png",
       "age": 1,
-      "id": 50
+      "id": 49
     }
   ]
 }

@@ -1,4 +1,12 @@
-<div class="container">
+
+   
+   <div ng-show="vm.loading" loader-css="ball-pulse">   
+    <h3>Loading</h3> 
+
+    </div>
+
+    <div>
+<div ng-show="!vm.loading" class="container" >
         <div class="col-xs-4 text-center">
                   <input 
                       class="form-control col-sm-4 top"
@@ -61,6 +69,10 @@
                             </div>
                         </div> 
                     </td>
+                    <td class="actions" data-th="">
+                    <a  href="#/editCustomer/{{customer.id}}" class="pull-right">Edit <i class="fa fa-pencil"></i></a>
+                    </td>
+
                     <td class="actions" data-th="">
                         <button ng-click="vm.deleteCustomer(customer.id)" class="btn btn-danger" style="margin: 5px;">Delete <i class="fa fa-trash"></i></button>
                     </td>
